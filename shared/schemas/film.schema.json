@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wordwatch.example/schemas/film.schema.json",
+  "title": "Film",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "year": {
+      "type": "integer"
+    },
+    "license": {
+      "type": "string"
+    },
+    "attribution": {
+      "type": "string"
+    },
+    "videoUrl": {
+      "type": "string",
+      "minLength": 1
+    },
+    "posterAsset": {
+      "type": "string"
+    },
+    "cuesAsset": {
+      "type": "string"
+    },
+    "lexiconAsset": {
+      "type": "string"
+    },
+    "durationSec": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    }
+  },
+  "required": [
+    "id",
+    "title",
+    "year",
+    "license",
+    "attribution",
+    "videoUrl",
+    "posterAsset",
+    "cuesAsset",
+    "lexiconAsset",
+    "durationSec"
+  ]
+}

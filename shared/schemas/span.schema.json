@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wordwatch.example/schemas/span.schema.json",
+  "title": "Span",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^c\\d{3,}-s\\d+$"
+    },
+    "start": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "end": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "surface": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80
+    },
+    "lemma": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pos": {
+      "type": "string",
+      "minLength": 1
+    },
+    "level": {
+      "enum": [
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ]
+    },
+    "kind": {
+      "enum": [
+        "word",
+        "phrasal",
+        "idiom"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "start",
+    "end",
+    "surface",
+    "lemma",
+    "pos",
+    "level",
+    "kind"
+  ]
+}

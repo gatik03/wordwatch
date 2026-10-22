@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wordwatch.example/schemas/cue.schema.json",
+  "title": "Cue",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^c\\d{3,}$"
+    },
+    "start": {
+      "type": "number",
+      "minimum": 0
+    },
+    "end": {
+      "type": "number",
+      "minimum": 0
+    },
+    "text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "spans": {
+      "type": "array",
+      "maxItems": 3,
+      "items": {
+        "$ref": "span.schema.json"
+      }
+    }
+  },
+  "required": [
+    "id",
+    "start",
+    "end",
+    "text",
+    "spans"
+  ]
+}

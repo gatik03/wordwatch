@@ -1,0 +1,92 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: WordWatch lookup and pronunciation API (HTTP API, Lambda, DynamoDB, S3, Bedrock, Polly)
+
+Parameters:
+  BedrockModelId:
+    Type: String
+    Default: apac.amazon.nova-lite-v1:0
+  ApiKeyParam:
+    Type: String
+    Default: /wordwatch/api-key
+    Description: SSM parameter holding the API key (create it before first use, see README)
+
+Resources:
+  Api:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      DefaultRouteSettings:
+        ThrottlingRateLimit: 5
+        ThrottlingBurstLimit: 10
+
+  ApiFunction:
+    Type: AWS::Serverless::Function
+    Metadata:
+      BuildMethod: makefile # src/Makefile copies tools/pregen/{prompts,validate,bedrock}.py and shared/schemas in
+    Properties:
+      CodeUri: src/
+      Handler: handler.handler
+      Runtime: python3.12
+      Architectures: [x86_64]
+      Timeout: 29
+      MemorySize: 256
+      Environment:
+        Variables:
+          BEDROCK_MODEL_ID: !Ref BedrockModelId
+          TABLE_NAME: !Ref CacheTable
+          AUDIO_BUCKET: !Ref AudioBucket
+          API_KEY_SSM_PARAM: !Ref ApiKeyParam
+          WORDWATCH_SCHEMA_DIR: /var/task/schemas
+      Events:
+        Lookup:
+          Type: HttpApi
+          Properties: {ApiId: !Ref Api, Path: /v1/lookup, Method: POST}
+        Speak:
+          Type: HttpApi
+          Properties: {ApiId: !Ref Api, Path: /v1/speak, Method: POST}
+      Policies:
+        - Version: "2012-10-17"
+          Statement:
+            - Effect: Allow
+              Action: bedrock:InvokeModel
+              Resource:
+                - !Sub arn:${AWS::Partition}:bedrock:${AWS::Region}:${AWS::AccountId}:inference-profile/${BedrockModelId}
+                # Regions the apac profile routes to could not be looked up (AWS session expired), so any Region
+                - !Sub arn:${AWS::Partition}:bedrock:*::foundation-model/amazon.nova-lite-v1:0
+            - Effect: Allow
+              Action: polly:SynthesizeSpeech
+              Resource: "*" # Polly has no resource-level permission for synthesis
+            - Effect: Allow
+              Action: [dynamodb:GetItem, dynamodb:PutItem]
+              Resource: !GetAtt CacheTable.Arn
+            - Effect: Allow
+              Action: [s3:GetObject, s3:PutObject]
+              Resource: !Sub ${AudioBucket.Arn}/speak/*
+            - Effect: Allow
+              Action: s3:ListBucket # without it S3 answers 403 instead of 404 for a missing key
+              Resource: !GetAtt AudioBucket.Arn
+            - Effect: Allow
+              Action: ssm:GetParameter
+              Resource: !Sub arn:${AWS::Partition}:ssm:${AWS::Region}:${AWS::AccountId}:parameter${ApiKeyParam}
+
+  CacheTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions: [{AttributeName: pk, AttributeType: S}]
+      KeySchema: [{AttributeName: pk, KeyType: HASH}]
+      TimeToLiveSpecification: {AttributeName: ttl, Enabled: true}
+
+  AudioBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      PublicAccessBlockConfiguration: {BlockPublicAcls: true, BlockPublicPolicy: true, IgnorePublicAcls: true, RestrictPublicBuckets: true}
+      BucketEncryption:
+        ServerSideEncryptionConfiguration: [{ServerSideEncryptionByDefault: {SSEAlgorithm: AES256}}]
+      LifecycleConfiguration:
+        Rules: [{Id: expire-audio, Status: Enabled, Prefix: speak/, ExpirationInDays: 90}]
+
+Outputs:
+  ApiUrl:
+    Description: Set as API_BASE_URL in apps/tv/src/app/config.ts
+    Value: !GetAtt Api.ApiEndpoint

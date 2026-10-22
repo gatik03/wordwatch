@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wordwatch.example/schemas/lexentry.schema.json",
+  "title": "LexEntry",
+  "type": "object",
+  "properties": {
+    "spanId": {
+      "type": "string",
+      "pattern": "^c\\d{3,}-s\\d+$"
+    },
+    "meaning": {
+      "type": "string",
+      "minLength": 1
+    },
+    "example": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tr": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minProperties": 1
+    },
+    "audio": {
+      "type": "string"
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    }
+  },
+  "required": [
+    "spanId",
+    "meaning",
+    "example",
+    "tr",
+    "confidence"
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "c001-s1": {
+    "spanId": "c001-s1",
+    "meaning": "A rude, unkind or selfish person.",
+    "example": "Don't be a jerk and apologize to her.",
+    "tr": {
+      "hi": "बदतमीज़ इंसान",
+      "es": "idiota"
+    },
+    "confidence": 0.93
+  },
+  "c002-s1": {
+    "spanId": "c002-s1",
+    "meaning": "Things you care about so strongly that you give them your time.",
+    "example": "Her two passions are painting and long-distance running.",
+    "tr": {
+      "hi": "जुनून",
+      "es": "pasiones"
+    },
+    "confidence": 0.92
+  },
+  "c004-s1": {
+    "spanId": "c004-s1",
+    "meaning": "Felt suddenly frightened, upset or very uneasy about something.",
+    "example": "She freaked out when she saw the huge spider.",
+    "tr": {
+      "hi": "बुरी तरह घबराया हुआ",
+      "es": "asustado, muy alterado"
+    },
+    "confidence": 0.94
+  },
+  "c007-s1": {
+    "spanId": "c007-s1",
+    "meaning": "Frightening dreams that make you wake up scared.",
+    "example": "The scary film gave him nightmares for a week.",
+    "tr": {
+      "hi": "बुरे सपने",
+      "es": "pesadillas"
+    },
+    "confidence": 0.95
+  },
+  "c008-s1": {
+    "spanId": "c008-s1",
+    "meaning": "Sharp curved nails on an animal's foot, or a machine part shaped like them.",
+    "example": "The cat sank its claws into the sofa.",
+    "tr": {
+      "hi": "पंजे",
+      "es": "garras"
+    },
+    "confidence": 0.9
+  },
+  "c010-s1": {
+    "spanId": "c010-s1",
+    "meaning": "Made two devices or sets of data match and work together.",
+    "example": "My phone synced with my laptop overnight.",
+    "tr": {
+      "hi": "सिंक किया गया, मिलान किया गया",
+      "es": "sincronizado"
+    },
+    "confidence": 0.88
+  },
+  "c016-s1": {
+    "spanId": "c016-s1",
+    "meaning": "Informal: someone very talented and admired, like a famous musician.",
+    "example": "The new chef is a real rockstar in this city.",
+    "tr": {
+      "hi": "सुपरस्टार, बेहद मशहूर हस्ती",
+      "es": "estrella de rock, figura admirada"
+    },
+    "confidence": 0.85
+  },
+  "c020-s1": {
+    "spanId": "c020-s1",
+    "meaning": "Everything is ready and working, so the activity can begin.",
+    "example": "The engineers checked everything and said, all systems go.",
+    "tr": {
+      "hi": "सब कुछ तैयार है, शुरू करो",
+      "es": "todo listo, adelante"
+    },
+    "confidence": 0.91
+  },
+  "c030-s1": {
+    "spanId": "c030-s1",
+    "meaning": "Gentle and loving, careful not to hurt someone.",
+    "example": "He gave the sleeping child a tender kiss.",
+    "tr": {
+      "hi": "कोमल, स्नेहपूर्ण",
+      "es": "tierno, delicado"
+    },
+    "confidence": 0.9
+  },
+  "c042-s1": {
+    "spanId": "c042-s1",
+    "meaning": "Go faster or do something more quickly.",
+    "example": "We need to speed up or we'll miss the train.",
+    "tr": {
+      "hi": "जल्दी करो",
+      "es": "date prisa, acelera"
+    },
+    "confidence": 0.93
+  },
+  "c047-s1": {
+    "spanId": "c047-s1",
+    "meaning": "To damage something so badly that it no longer exists.",
+    "example": "The storm could destroy the whole village.",
+    "tr": {
+      "hi": "नष्ट करना",
+      "es": "destruir"
+    },
+    "confidence": 0.96
+  },
+  "c050-s1": {
+    "spanId": "c050-s1",
+    "meaning": "Stop a plan or mission before it is finished.",
+    "example": "The pilot had to abort the landing.",
+    "tr": {
+      "hi": "रद्द करो, बीच में रोक दो",
+      "es": "abortar, cancelar"
+    },
+    "confidence": 0.92
+  },
+  "c055-s1": {
+    "spanId": "c055-s1",
+    "meaning": "Made me feel deep sadness, especially by ending a relationship.",
+    "example": "It broke her heart when her best friend moved away.",
+    "tr": {
+      "hi": "मेरा दिल तोड़ दिया",
+      "es": "me rompiste el corazón"
+    },
+    "confidence": 0.95
+  },
+  "c059-s1": {
+    "spanId": "c059-s1",
+    "meaning": "To press or hit something so hard it is destroyed, or defeat someone completely.",
+    "example": "The team hopes to crush its rivals this weekend.",
+    "tr": {
+      "hi": "कुचल देना",
+      "es": "aplastar"
+    },
+    "confidence": 0.9
+  },
+  "c062-s1": {
+    "spanId": "c062-s1",
+    "meaning": "Something said or done on the spot, without planning or a script.",
+    "example": "The actor's funny ad-lib made the whole crew laugh.",
+    "tr": {
+      "hi": "बिना तैयारी के बोली गई बात",
+      "es": "improvisación"
+    },
+    "confidence": 0.87
+  },
+  "c064-s1": {
+    "spanId": "c064-s1",
+    "meaning": "One particular occasion; here, on this occasion, unlike before.",
+    "example": "I failed the test last year, but this time I passed.",
+    "tr": {
+      "hi": "बार (इस बार)",
+      "es": "vez (esta vez)"
+    },
+    "confidence": 0.9
+  },
+  "c066-s1": {
+    "spanId": "c066-s1",
+    "meaning": "The amount of minutes or hours left before something must end.",
+    "example": "Hurry up, there is very little time before the show starts.",
+    "tr": {
+      "hi": "समय",
+      "es": "tiempo"
+    },
+    "confidence": 0.9
+  },
+  "c075-s1": {
+    "spanId": "c075-s1",
+    "meaning": "Something useful you should understand from an experience, often a mistake.",
+    "example": "After the failed project, there was a lesson to be learned.",
+    "tr": {
+      "hi": "सीखने लायक एक सबक",
+      "es": "una lección que aprender"
+    },
+    "confidence": 0.9
+  },
+  "c076-s1": {
+    "spanId": "c076-s1",
+    "meaning": "The result was not as bad as it might have been.",
+    "example": "We lost, but honestly it could have gone worse.",
+    "tr": {
+      "hi": "इससे बुरा भी हो सकता था",
+      "es": "podría haber ido peor"
+    },
+    "confidence": 0.82
+  }
+}

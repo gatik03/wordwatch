@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wordwatch.example/schemas/lookup-request.schema.json",
+  "title": "LookupRequest",
+  "type": "object",
+  "properties": {
+    "surface": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80
+    },
+    "lemma": {
+      "type": "string",
+      "maxLength": 80
+    },
+    "sentence": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 300
+    },
+    "prevLine": {
+      "type": "string",
+      "maxLength": 300
+    },
+    "nextLine": {
+      "type": "string",
+      "maxLength": 300
+    },
+    "filmId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "targetLang": {
+      "enum": [
+        "hi",
+        "es"
+      ]
+    },
+    "mode": {
+      "enum": [
+        "define",
+        "explain_more"
+      ]
+    }
+  },
+  "required": [
+    "surface",
+    "sentence",
+    "filmId",
+    "targetLang",
+    "mode"
+  ]
+}

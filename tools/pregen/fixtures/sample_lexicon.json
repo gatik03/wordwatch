@@ -1,0 +1,137 @@
+{
+  "entries": [
+    {
+      "cue": "c001", "surface": "jerk", "lemma": "jerk", "pos": "noun", "level": "B2", "kind": "word",
+      "meaning": "A rude, unkind or selfish person.",
+      "example": "Don't be a jerk and apologize to her.",
+      "tr": {"hi": "बदतमीज़ इंसान", "es": "idiota"},
+      "confidence": 0.93
+    },
+    {
+      "cue": "c002", "surface": "passions", "lemma": "passion", "pos": "noun", "level": "B2", "kind": "word",
+      "meaning": "Things you care about so strongly that you give them your time.",
+      "example": "Her two passions are painting and long-distance running.",
+      "tr": {"hi": "जुनून", "es": "pasiones"},
+      "confidence": 0.92
+    },
+    {
+      "cue": "c004", "surface": "freaked out", "lemma": "freak out", "pos": "phrasal verb", "level": "B2", "kind": "phrasal",
+      "meaning": "Felt suddenly frightened, upset or very uneasy about something.",
+      "example": "She freaked out when she saw the huge spider.",
+      "tr": {"hi": "बुरी तरह घबराया हुआ", "es": "asustado, muy alterado"},
+      "confidence": 0.94
+    },
+    {
+      "cue": "c007", "surface": "nightmares", "lemma": "nightmare", "pos": "noun", "level": "B2", "kind": "word",
+      "meaning": "Frightening dreams that make you wake up scared.",
+      "example": "The scary film gave him nightmares for a week.",
+      "tr": {"hi": "बुरे सपने", "es": "pesadillas"},
+      "confidence": 0.95
+    },
+    {
+      "cue": "c008", "surface": "claws", "lemma": "claw", "pos": "noun", "level": "C1", "kind": "word",
+      "meaning": "Sharp curved nails on an animal's foot, or a machine part shaped like them.",
+      "example": "The cat sank its claws into the sofa.",
+      "tr": {"hi": "पंजे", "es": "garras"},
+      "confidence": 0.9
+    },
+    {
+      "cue": "c010", "surface": "synced", "lemma": "sync", "pos": "verb", "level": "C1", "kind": "word",
+      "meaning": "Made two devices or sets of data match and work together.",
+      "example": "My phone synced with my laptop overnight.",
+      "tr": {"hi": "सिंक किया गया, मिलान किया गया", "es": "sincronizado"},
+      "confidence": 0.88
+    },
+    {
+      "cue": "c016", "surface": "rockstar", "lemma": "rock star", "pos": "noun", "level": "C1", "kind": "word",
+      "meaning": "Informal: someone very talented and admired, like a famous musician.",
+      "example": "The new chef is a real rockstar in this city.",
+      "tr": {"hi": "सुपरस्टार, बेहद मशहूर हस्ती", "es": "estrella de rock, figura admirada"},
+      "confidence": 0.85
+    },
+    {
+      "cue": "c020", "surface": "All systems go", "lemma": "all systems go", "pos": "idiom", "level": "C1", "kind": "idiom",
+      "meaning": "Everything is ready and working, so the activity can begin.",
+      "example": "The engineers checked everything and said, all systems go.",
+      "tr": {"hi": "सब कुछ तैयार है, शुरू करो", "es": "todo listo, adelante"},
+      "confidence": 0.91
+    },
+    {
+      "cue": "c030", "surface": "tender", "lemma": "tender", "pos": "adjective", "level": "C1", "kind": "word",
+      "meaning": "Gentle and loving, careful not to hurt someone.",
+      "example": "He gave the sleeping child a tender kiss.",
+      "tr": {"hi": "कोमल, स्नेहपूर्ण", "es": "tierno, delicado"},
+      "confidence": 0.9
+    },
+    {
+      "cue": "c042", "surface": "Speed it up", "lemma": "speed up", "pos": "phrasal verb", "level": "B1", "kind": "phrasal",
+      "meaning": "Go faster or do something more quickly.",
+      "example": "We need to speed up or we'll miss the train.",
+      "tr": {"hi": "जल्दी करो", "es": "date prisa, acelera"},
+      "confidence": 0.93
+    },
+    {
+      "cue": "c047", "surface": "destroy", "lemma": "destroy", "pos": "verb", "level": "B2", "kind": "word",
+      "meaning": "To damage something so badly that it no longer exists.",
+      "example": "The storm could destroy the whole village.",
+      "tr": {"hi": "नष्ट करना", "es": "destruir"},
+      "confidence": 0.96
+    },
+    {
+      "cue": "c050", "surface": "Abort", "lemma": "abort", "pos": "verb", "level": "C1", "kind": "word",
+      "meaning": "Stop a plan or mission before it is finished.",
+      "example": "The pilot had to abort the landing.",
+      "tr": {"hi": "रद्द करो, बीच में रोक दो", "es": "abortar, cancelar"},
+      "confidence": 0.92
+    },
+    {
+      "cue": "c055", "surface": "broke my heart", "lemma": "break someone's heart", "pos": "idiom", "level": "B2", "kind": "idiom",
+      "meaning": "Made me feel deep sadness, especially by ending a relationship.",
+      "example": "It broke her heart when her best friend moved away.",
+      "tr": {"hi": "मेरा दिल तोड़ दिया", "es": "me rompiste el corazón"},
+      "confidence": 0.95
+    },
+    {
+      "cue": "c059", "surface": "crush", "lemma": "crush", "pos": "verb", "level": "B2", "kind": "word",
+      "meaning": "To press or hit something so hard it is destroyed, or defeat someone completely.",
+      "example": "The team hopes to crush its rivals this weekend.",
+      "tr": {"hi": "कुचल देना", "es": "aplastar"},
+      "confidence": 0.9
+    },
+    {
+      "cue": "c062", "surface": "ad-lib", "lemma": "ad-lib", "pos": "noun", "level": "C1", "kind": "word",
+      "meaning": "Something said or done on the spot, without planning or a script.",
+      "example": "The actor's funny ad-lib made the whole crew laugh.",
+      "tr": {"hi": "बिना तैयारी के बोली गई बात", "es": "improvisación"},
+      "confidence": 0.87
+    },
+    {
+      "cue": "c064", "surface": "time", "lemma": "time", "pos": "noun", "level": "B1", "kind": "word",
+      "meaning": "One particular occasion; here, on this occasion, unlike before.",
+      "example": "I failed the test last year, but this time I passed.",
+      "tr": {"hi": "बार (इस बार)", "es": "vez (esta vez)"},
+      "confidence": 0.9
+    },
+    {
+      "cue": "c066", "surface": "time", "lemma": "time", "pos": "noun", "level": "B1", "kind": "word",
+      "meaning": "The amount of minutes or hours left before something must end.",
+      "example": "Hurry up, there is very little time before the show starts.",
+      "tr": {"hi": "समय", "es": "tiempo"},
+      "confidence": 0.9
+    },
+    {
+      "cue": "c075", "surface": "a lesson to be learned", "lemma": "a lesson to be learned", "pos": "idiom", "level": "B2", "kind": "idiom",
+      "meaning": "Something useful you should understand from an experience, often a mistake.",
+      "example": "After the failed project, there was a lesson to be learned.",
+      "tr": {"hi": "सीखने लायक एक सबक", "es": "una lección que aprender"},
+      "confidence": 0.9
+    },
+    {
+      "cue": "c076", "surface": "Could'a gone worse", "lemma": "could have gone worse", "pos": "idiom", "level": "B2", "kind": "idiom",
+      "meaning": "The result was not as bad as it might have been.",
+      "example": "We lost, but honestly it could have gone worse.",
+      "tr": {"hi": "इससे बुरा भी हो सकता था", "es": "podría haber ido peor"},
+      "confidence": 0.82
+    }
+  ]
+}

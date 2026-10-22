@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wordwatch.example/schemas/annotation.schema.json",
+  "title": "Annotation",
+  "type": "object",
+  "properties": {
+    "cues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^c\\d{3,}$"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "surface": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 80
+                },
+                "lemma": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "pos": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "level": {
+                  "enum": [
+                    "B1",
+                    "B2",
+                    "C1",
+                    "C2"
+                  ]
+                },
+                "kind": {
+                  "enum": [
+                    "word",
+                    "phrasal",
+                    "idiom"
+                  ]
+                },
+                "meaning": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "example": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "tr": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "minProperties": 1
+                },
+                "confidence": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "surface",
+                "lemma",
+                "pos",
+                "level",
+                "kind",
+                "meaning",
+                "example",
+                "tr",
+                "confidence"
+              ]
+            }
+          }
+        },
+        "required": [
+          "id",
+          "items"
+        ]
+      }
+    }
+  },
+  "required": [
+    "cues"
+  ]
+}

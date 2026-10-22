@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wordwatch.example/schemas/savedword.schema.json",
+  "title": "SavedWord",
+  "type": "object",
+  "properties": {
+    "spanId": {
+      "type": "string"
+    },
+    "filmId": {
+      "type": "string"
+    },
+    "surface": {
+      "type": "string"
+    },
+    "lemma": {
+      "type": "string"
+    },
+    "meaning": {
+      "type": "string"
+    },
+    "tr": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minProperties": 1
+    },
+    "cueText": {
+      "type": "string"
+    },
+    "savedAt": {
+      "type": "integer"
+    },
+    "box": {
+      "enum": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  "required": [
+    "spanId",
+    "filmId",
+    "surface",
+    "lemma",
+    "meaning",
+    "tr",
+    "cueText",
+    "savedAt",
+    "box"
+  ]
+}
